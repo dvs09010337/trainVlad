@@ -19,6 +19,7 @@ namespace ConsoleApp1
         static void Resize(ref int [] arr, int newSize)
         {
             var newArr = new int[newSize];
+            /*
             if (newSize > arr.Length)            
             {
                 for (int i = 0; i < arr.Length; i++)
@@ -32,6 +33,12 @@ namespace ConsoleApp1
                 {
                     newArr[i] = arr[i];
                 }
+            }
+            */
+            int count = newSize > arr.Length ? arr.Length : newSize;
+            for (int i = 0; i < count; i++)
+            {
+                newArr[i] = arr[i];
             }
             for (int i = 0; i < newSize ; i++)
             {
